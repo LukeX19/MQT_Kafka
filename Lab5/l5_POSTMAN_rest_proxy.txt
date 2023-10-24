@@ -1,0 +1,23 @@
+Use Postman foe executing the commands.  
+1. Get cluster Id
+
+GET http://localhost:8082/v3/clusters
+ 
+2. Set cluster id
+ $cluster="TZ7rbN7FQbCOYoBBiK-oDg"
+ $cluster="KDT0WZN5TVi-edeqC1QwWg"
+ quwMo_QkQrqYvutHUCfPbw
+ 
+2. Create topic
+Body --> raw  --> JSON
+{ "topic_name" : "postman_topic" }
+
+Body --> headers
+key -->  Content-Type value --> application/json
+
+3. List all topics: 
+GET http://localhost:8082/v3/clusters/$cluster/topics
+ 
+3. Describe topic
+
+GET  http://localhost:8082/v3/clusters/$cluster/topics/postman_topic
