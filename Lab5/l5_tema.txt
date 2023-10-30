@@ -39,5 +39,8 @@ http://localhost:8081/schemas/ids/1
 4. Create a Consumer that uses an avro schema for Company class. 
 
 Questions: 
-1.Why is needed the class empty constructor? 
+1.Why is needed the class empty constructor?
+	The class' empty constructor must be implemented explicitly in order to ensure the correct serialization/deserialization result. For instantiating objects in Avro classes, this process implies having an empty constructor. Otherwise, there may appear deserealization errors.
+
 2.Why are the Getters needed?
+	The getter methods are needed during the serialization/deserialization process, because data should be controlled and accessed (during the process, the getters are called automatically). This approach also ensures access only to the needed data, preventing access to unnecessary properties of objects.
