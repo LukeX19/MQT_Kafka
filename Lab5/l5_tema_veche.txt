@@ -36,8 +36,22 @@ http://localhost:8081/   --> the port coresponds with the value from docker-comp
 http://localhost:8081/subjects
 http://localhost:8081/schemas/ids/1 
 
-4. Create a Consumer that uses an avro schema for Company class. 
+4. Create a Consumer that uses an avro schema for Company class.
 
-Questions: 
-1.Why is needed the class empty constructor? 
-2.Why are the Getters needed?
+5. Create a Producer that uses a json schema for JCompany class.
+In main\java folder of the Producer project create json folder.
+Copy JCompany.java and SimpleJProducer.java.
+In build.gradle file:
+Add implementation 'io.confluent:kafka-json-schema-serializer:7.5.1' 
+Run the JProducer.java file.
+
+6. Create a Consumer that uses a json schema for JCompany class.
+In main\java folder of the Producer project create json folder.
+Copy JCompany.java and JConsumer.java.
+In build.gradle file:
+Add implementation 'io.confluent:kafka-json-schema-serializer:7.5.1' 
+Run the JConsumer.java file.
+
+7. Create JProducer.java class. This class sends JCompany objects each 3 seconds.  
+
+Question: why is needed the class empty constructor? 

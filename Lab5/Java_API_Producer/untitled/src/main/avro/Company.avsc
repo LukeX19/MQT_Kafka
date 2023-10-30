@@ -1,7 +1,7 @@
 {
-  "namespace": "module4",
+  "namespace": "producer",
   "type": "record",
-  "name": "Company",
+  "name": "AvroCompany",
   "fields": [
     {
       "name": "tradeNumber",
